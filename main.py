@@ -73,6 +73,7 @@ def pythagorean(a, b):
     return math.sqrt(a ** 2 + b ** 2)
 
 
+# this function ensures user only input numbers
 def validate_user_answer():
     while True:
         try:
@@ -121,7 +122,6 @@ def main():
     num_correct = 0  # initiate counter
     problem_solved = 0  # initiate counter
     for x in range(num_of_questions()):
-
         (user_prompt())
         user_input = user_choice()
         a = generate_input()
@@ -135,7 +135,7 @@ def main():
             problem_solved += 1
             print("You got", num_correct, "out of", problem_solved, "questions correct.")
 
-    print("Your score is", num_correct / problem_solved * 100, "%")
+    print("Your score is", num_correct / problem_solved * 100,"%")
 
 
 if __name__ == "__main__":
